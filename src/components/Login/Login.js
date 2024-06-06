@@ -45,9 +45,6 @@ export function Login() {
     try {
       setLoading(true)
       const response = await axios.post(`${serverURL}/api/Admin/login`, loginData);
-
-
-
       if (response && response.status === 200) {
         setLoading(false)
         toast.success('Successfully Sign In')
